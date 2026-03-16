@@ -76,8 +76,13 @@ cities = {
     "Madrid": {"language": "Spanish", "population": 3_223_000, "size": 604, "country": "Spain"},
     "Rome": {"language": "Italian", "population": 2_873_000, "size": 1285, "country": "Italy"}
 }
-list2= []
-for keys, values in cities.items():
-    for key, value in values.items():
-        if value["population"]
-
+list_population = []
+list_sorted_cities = []
+for key, value in cities.items():
+    list_population.append(value["population"])
+list_population.sort()
+for number in list_population:
+    for key, value in cities.items():
+        if number == value["population"]:
+            list_sorted_cities.append(key)
+print(list_sorted_cities)
